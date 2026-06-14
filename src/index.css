@@ -1,6 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #0d1117;
-  color: white;
-  font-family: Arial, sans-serif;
+  color: #f0f6fc;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 100px 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
 }

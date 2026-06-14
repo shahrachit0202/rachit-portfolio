@@ -1,29 +1,54 @@
 export default function Experience() {
+  const experiences = [
+    {
+      company: "WESEE (Indian Navy)",
+      role: "VAPT Intern",
+      duration: "Oct 2025 - Mar 2026",
+    },
+    {
+      company: "CiberTroops Security Solutions",
+      role: "VAPT Intern",
+      duration: "Nov 2024 - Mar 2025",
+    },
+    {
+      company: "Elastic Run",
+      role: "SOC Analyst Intern",
+      duration: "Sep 2022 - Jan 2023",
+    },
+  ];
+
   return (
     <section
       id="experience"
       style={{
-        padding: "100px 20px",
         maxWidth: "1000px",
         margin: "auto",
       }}
     >
-      <h2>Experience</h2>
+      <h2 style={{ color: "#00ff88" }}>
+        Experience
+      </h2>
 
-      <div>
-        <h3>WESEE (Indian Navy)</h3>
-        <p>VAPT Intern | Oct 2025 - Mar 2026</p>
-      </div>
+      {experiences.map((exp, index) => (
+        <div
+          key={index}
+          style={{
+            background: "#161b22",
+            padding: "25px",
+            borderRadius: "12px",
+            marginBottom: "20px",
+            border: "1px solid #30363d",
+          }}
+        >
+          <h3>{exp.company}</h3>
 
-      <div>
-        <h3>CiberTroops Security Solutions</h3>
-        <p>VAPT Intern | Nov 2024 - Mar 2025</p>
-      </div>
+          <p>{exp.role}</p>
 
-      <div>
-        <h3>Elastic Run</h3>
-        <p>SOC Analyst Intern | Sept 2022 - Jan 2023</p>
-      </div>
+          <p style={{ color: "#8b949e" }}>
+            {exp.duration}
+          </p>
+        </div>
+      ))}
     </section>
   );
 }
