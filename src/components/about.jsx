@@ -1,6 +1,7 @@
 export default function About() {
   return (
     <section
+      id="about"
       style={{
         padding: "100px 20px",
         maxWidth: "900px",

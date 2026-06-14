@@ -14,6 +14,7 @@ export default function Skills() {
 
   return (
     <section
+      id="skills"
       style={{
         padding: "100px 20px",
         maxWidth: "900px",

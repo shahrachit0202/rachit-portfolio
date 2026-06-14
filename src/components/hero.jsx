@@ -10,7 +10,12 @@ export default function Hero() {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "4rem" }}>
+      <h1
+        style={{
+          fontSize: "5rem",
+          marginBottom: "10px",
+        }}
+      >
         Rachit Shah
       </h1>
 
@@ -18,9 +23,43 @@ export default function Hero() {
         Cyber Security Engineer
       </h2>
 
-      <p>
-        VAPT Analyst | Red Team Enthusiast | SOC Operations
+      <p
+        style={{
+          maxWidth: "700px",
+          marginTop: "20px",
+        }}
+      >
+        M.Tech Cyber Security student specializing in
+        Vulnerability Assessment & Penetration Testing,
+        Red Teaming, SOC Operations, Cloud Security and
+        Industrial Control System Security.
       </p>
+
+      <div style={{ marginTop: "30px" }}>
+        <button
+          style={{
+            background: "#00ff88",
+            padding: "12px 20px",
+            border: "none",
+            marginRight: "10px",
+            cursor: "pointer",
+          }}
+        >
+          Download Resume
+        </button>
+
+        <button
+          style={{
+            background: "transparent",
+            color: "white",
+            border: "1px solid #00ff88",
+            padding: "12px 20px",
+            cursor: "pointer",
+          }}
+        >
+          View Projects
+        </button>
+      </div>
     </section>
   );
 }
