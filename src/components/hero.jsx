@@ -1,6 +1,12 @@
 import profile from "../assets/profile.jpg";
 import Container from "./Container";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+
 import { SiTryhackme } from "react-icons/si";
 
 export default function Hero() {
@@ -31,7 +37,7 @@ export default function Hero() {
             </h1>
 
             <h2 className="text-xl lg:text-2xl text-slate-400 mb-8">
-              VAPT Analyst • Red Team Operator
+              Offensive Security Engineer • VAPT • Red Teaming
             </h2>
 
             <p className="text-slate-300 leading-8 max-w-3xl text-lg">
@@ -50,16 +56,35 @@ export default function Hero() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-emerald-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
+                className="
+                  bg-emerald-400
+                  text-black
+                  px-6
+                  py-3
+                  rounded-lg
+                  font-semibold
+                  hover:scale-105
+                  transition
+                "
               >
                 Download Resume
               </a>
 
               <a
-                href="#contact"
-                className="border border-emerald-400 text-emerald-400 px-6 py-3 rounded-lg hover:bg-emerald-400 hover:text-black transition"
+                href="#projects"
+                className="
+                  border
+                  border-emerald-400
+                  text-emerald-400
+                  px-6
+                  py-3
+                  rounded-lg
+                  hover:bg-emerald-400
+                  hover:text-black
+                  transition
+                "
               >
-                Contact Me
+                View Projects
               </a>
 
             </div>
@@ -94,6 +119,13 @@ export default function Hero() {
                 <SiTryhackme />
               </a>
 
+              <a
+                href="mailto:shahrachit0202@gmail.com"
+                className="text-white hover:text-emerald-400 transition"
+              >
+                <FaEnvelope />
+              </a>
+
             </div>
 
             {/* Skills */}
@@ -101,7 +133,17 @@ export default function Hero() {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="border border-slate-700 text-slate-300 px-4 py-2 rounded-full hover:border-emerald-400 hover:text-emerald-400 transition"
+                  className="
+                    border
+                    border-slate-700
+                    text-slate-300
+                    px-4
+                    py-2
+                    rounded-full
+                    hover:border-emerald-400
+                    hover:text-emerald-400
+                    transition
+                  "
                 >
                   {skill}
                 </span>
