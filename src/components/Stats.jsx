@@ -3,7 +3,7 @@ import Container from "./Container";
 export default function Stats() {
   const stats = [
     {
-      value: "4+",
+      value: "4",
       label: "Springer Publications",
     },
     {
@@ -11,12 +11,12 @@ export default function Stats() {
       label: "Security Internships",
     },
     {
-      value: "50+",
-      label: "TryHackMe Labs",
+      value: "3",
+      label: "Cyber Exercises",
     },
     {
-      value: "3+",
-      label: "Cyber Exercises",
+      value: "5+",
+      label: "Security Domains",
     },
   ];
 
@@ -35,7 +35,9 @@ export default function Stats() {
                 p-6
                 text-center
                 hover:border-emerald-400
+                hover:-translate-y-1
                 transition-all
+                duration-300
               "
             >
               <h3 className="text-4xl font-bold text-emerald-400">

@@ -6,25 +6,25 @@ export default function Achievements() {
     {
       title: "WESEE (Indian Navy)",
       description:
-        "Completed a VAPT Internship contributing to security assessments, vulnerability identification, and reporting activities.",
+        "Completed a VAPT Internship contributing to vulnerability assessments, web application security testing, and security reporting activities.",
       icon: "⚓",
     },
     {
       title: "BHARAT NCX 2025",
       description:
-        "Served as Teaching Assistant for ICS Security & Red Teaming exercises focused on SCADA and Industrial Networks.",
+        "Served as Teaching Assistant for ICS Security and Red Teaming exercises focused on SCADA systems, industrial protocols, and critical infrastructure security.",
       icon: "🏭",
     },
     {
       title: "CII SECEX 2025",
       description:
-        "Participated in a national cyber range exercise performing Red Team operations and adversary simulation.",
+        "Participated in a national cyber range exercise performing Red Team operations, adversary simulation, reconnaissance, and attack-path analysis.",
       icon: "🎯",
     },
     {
-      title: "Springer Publications",
+      title: "Springer Author",
       description:
-        "Published 4 research papers in cybersecurity covering network security, cryptography, deepfake detection, and phishing detection.",
+        "Published cybersecurity research covering network security, cryptography, deepfake detection, phishing detection, and AI-driven security analysis.",
       icon: "📚",
     },
   ];
@@ -32,11 +32,9 @@ export default function Achievements() {
   return (
     <section className="py-24">
       <Container>
-
         <SectionTitle title="Featured Achievements" />
 
         <div className="grid md:grid-cols-2 gap-6">
-
           {achievements.map((achievement) => (
             <div
               key={achievement.title}
@@ -65,9 +63,7 @@ export default function Achievements() {
               </p>
             </div>
           ))}
-
         </div>
-
       </Container>
     </section>
   );
