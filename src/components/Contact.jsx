@@ -1,64 +1,90 @@
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaFilePdf,
+} from "react-icons/fa";
 import { SiTryhackme } from "react-icons/si";
 
 export default function Contact() {
+  const contacts = [
+    {
+      icon: <FaEnvelope />,
+      title: "Email",
+      value: "shahrachit0202@gmail.com",
+      link: "mailto:shahrachit0202@gmail.com",
+    },
+    {
+      icon: <FaLinkedin />,
+      title: "LinkedIn",
+      value: "Connect Professionally",
+      link: "https://www.linkedin.com/in/rachit-shah-8ab8b220b/",
+    },
+    {
+      icon: <FaGithub />,
+      title: "GitHub",
+      value: "View Projects & Research",
+      link: "https://github.com/shahrachit0202",
+    },
+    {
+      icon: <SiTryhackme />,
+      title: "TryHackMe",
+      value: "Cyber Security Labs",
+      link: "https://tryhackme.com/p/R2Shah",
+    },
+    {
+      icon: <FaFilePdf />,
+      title: "Resume",
+      value: "Download Resume",
+      link: "/resume.pdf",
+    },
+  ];
+
   return (
     <section id="contact" className="py-24">
       <Container>
+        <SectionTitle title="Let's Connect" />
 
-        <SectionTitle title="Contact" />
+        <p className="text-slate-400 mb-10 max-w-2xl">
+          Interested in Cyber Security, VAPT, Red Teaming, Security Research,
+          or collaboration opportunities? Feel free to connect with me.
+        </p>
 
-        <div
-          className="
-            bg-[#161b22]
-            border
-            border-slate-800
-            rounded-2xl
-            p-8
-          "
-        >
-          <p className="text-slate-300 mb-4">
-            Email: shahrachit0202@gmail.com
-          </p>
-
-          <p className="text-slate-300 mb-6">
-            Location: Ahmedabad, Gujarat, India
-          </p>
-
-          <div className="flex gap-6 text-3xl">
-
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {contacts.map((item) => (
             <a
-              href="https://github.com/shahrachit0202"
+              key={item.title}
+              href={item.link}
               target="_blank"
               rel="noreferrer"
-              className="text-white hover:text-emerald-400 transition"
+              className="
+                bg-[#161b22]
+                border
+                border-slate-800
+                rounded-2xl
+                p-6
+                hover:border-emerald-400
+                hover:-translate-y-1
+                transition-all
+                duration-300
+              "
             >
-              <FaGithub />
-            </a>
+              <div className="text-3xl text-emerald-400 mb-4">
+                {item.icon}
+              </div>
 
-            <a
-              href="https://www.linkedin.com/in/rachit-shah-8ab8b220b/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white hover:text-blue-500 transition"
-            >
-              <FaLinkedin />
-            </a>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {item.title}
+              </h3>
 
-            <a
-              href="https://tryhackme.com/p/R2Shah"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white hover:text-red-400 transition"
-            >
-              <SiTryhackme />
+              <p className="text-slate-400">
+                {item.value}
+              </p>
             </a>
-
-          </div>
+          ))}
         </div>
-
       </Container>
     </section>
   );
