@@ -44,60 +44,82 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24">
       <Container>
-
         <SectionTitle title="Professional Experience" />
 
-        <div className="space-y-6">
+        <div className="relative border-l-2 border-emerald-400 ml-4">
 
-          {experiences.map((exp) => (
+          {experiences.map((exp, index) => (
             <div
               key={exp.company}
-              className="
-                bg-[#161b22]
-                border
-                border-slate-800
-                rounded-2xl
-                p-8
-              "
+              className="relative ml-10 mb-12"
             >
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {exp.company}
-                  </h3>
+              {/* Timeline Dot */}
+              <div
+                className="
+                  absolute
+                  -left-[49px]
+                  top-6
+                  w-5
+                  h-5
+                  rounded-full
+                  bg-emerald-400
+                  border-4
+                  border-[#0d1117]
+                "
+              />
 
-                  <p className="text-emerald-400 mt-2">
-                    {exp.role}
+              {/* Experience Card */}
+              <div
+                className="
+                  bg-[#161b22]
+                  border
+                  border-slate-800
+                  rounded-2xl
+                  p-8
+                  hover:border-emerald-400
+                  transition-all
+                  duration-300
+                "
+              >
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">
+                      {exp.company}
+                    </h3>
+
+                    <p className="text-emerald-400 mt-2 font-medium">
+                      {exp.role}
+                    </p>
+                  </div>
+
+                  <p className="text-slate-400 mt-4 lg:mt-0">
+                    {exp.duration}
                   </p>
                 </div>
 
-                <p className="text-slate-400 mt-4 lg:mt-0">
-                  {exp.duration}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3 mt-6">
-                {exp.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="
-                      border
-                      border-slate-700
-                      rounded-full
-                      px-3
-                      py-2
-                      text-slate-300
-                    "
-                  >
-                    {skill}
-                  </span>
-                ))}
+                <div className="flex flex-wrap gap-3 mt-6">
+                  {exp.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="
+                        border
+                        border-slate-700
+                        rounded-full
+                        px-3
+                        py-2
+                        text-slate-300
+                        text-sm
+                      "
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
 
         </div>
-
       </Container>
     </section>
   );
