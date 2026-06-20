@@ -1,4 +1,20 @@
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const links = [
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
+    { name: "Red Team", href: "#redteam" },
+    { name: "Projects", href: "#projects" },
+    { name: "Publications", href: "#publications" },
+    { name: "Certifications", href: "#certifications" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
     <nav
       className="
@@ -24,7 +40,9 @@ export default function Navbar() {
           items-center
         "
       >
-        <h2
+        {/* Logo */}
+        <a
+          href="#"
           className="
             text-xl
             font-bold
@@ -32,8 +50,9 @@ export default function Navbar() {
           "
         >
           Rachit Shah
-        </h2>
+        </a>
 
+        {/* Desktop Menu */}
         <div
           className="
             hidden
@@ -43,39 +62,64 @@ export default function Navbar() {
             text-slate-300
           "
         >
-          <a href="#about" className="hover:text-emerald-400">
-            About
-          </a>
-
-          <a href="#skills" className="hover:text-emerald-400">
-            Skills
-          </a>
-
-          <a href="#experience" className="hover:text-emerald-400">
-            Experience
-          </a>
-
-          <a href="#redteam" className="hover:text-emerald-400">
-            Red Team
-          </a>
-
-          <a href="#projects" className="hover:text-emerald-400">
-            Projects
-          </a>
-
-          <a href="#publications" className="hover:text-emerald-400">
-            Publications
-          </a>
-
-          <a href="#certifications" className="hover:text-emerald-400">
-            Certifications
-          </a>
-
-          <a href="#contact" className="hover:text-emerald-400">
-            Contact
-          </a>
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="
+                hover:text-emerald-400
+                transition
+              "
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
+
+        {/* Mobile Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="
+            md:hidden
+            text-white
+            text-xl
+          "
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div
+          className="
+            md:hidden
+            bg-[#161b22]
+            border-t
+            border-slate-800
+            px-6
+            py-4
+            flex
+            flex-col
+            gap-4
+          "
+        >
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="
+                text-slate-300
+                hover:text-emerald-400
+                transition
+              "
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
