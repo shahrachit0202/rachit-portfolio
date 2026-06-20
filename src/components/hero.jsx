@@ -1,149 +1,142 @@
+import profile from "../assets/profile.jpg";
+import Container from "./Container";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiTryhackme } from "react-icons/si";
+
 export default function Hero() {
+  const skills = [
+    "VAPT",
+    "Red Teaming",
+    "OWASP",
+    "Network Security",
+    "SOC Operations",
+    "Cloud Security",
+    "ICS Security",
+  ];
+
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        textAlign: "center",
-        padding: "0 20px",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "5rem",
-          marginBottom: "10px",
-          color: "#ffffff",
-        }}
-      >
-        Rachit Shah
-      </h1>
+    <section className="min-h-screen flex items-center">
+      <Container>
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
 
-      <h2
-        style={{
-          color: "#00ff88",
-          fontSize: "2rem",
-          marginBottom: "20px",
-        }}
-      >
-        Cyber Security Engineer | VAPT Analyst
-      </h2>
+          {/* Left Side */}
+          <div className="flex-1">
 
-      <p
-        style={{
-          maxWidth: "800px",
-          color: "#c9d1d9",
-          fontSize: "1.1rem",
-          lineHeight: "1.8",
-        }}
-      >
-        M.Tech Cyber Security student at Rashtriya Raksha University with
-        hands-on experience in Vulnerability Assessment & Penetration Testing,
-        Red Team Operations, SOC Monitoring, Cloud Security, and ICS/SCADA
-        Security. Experienced in security assessments, threat detection,
-        offensive security exercises, and cybersecurity research.
-      </p>
+            <p className="text-emerald-400 font-semibold tracking-widest mb-3">
+              OFFENSIVE SECURITY • RED TEAMING • VAPT
+            </p>
 
-      <div
-        style={{
-          marginTop: "40px",
-          display: "flex",
-          gap: "15px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            background: "#00ff88",
-            color: "#000",
-            padding: "12px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Download Resume
-        </a>
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4">
+              Rachit Shah
+            </h1>
 
-        <a
-          href="#experience"
-          style={{
-            border: "1px solid #00ff88",
-            color: "#00ff88",
-            padding: "12px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-          }}
-        >
-          View Experience
-        </a>
-      </div>
+            <h2 className="text-xl lg:text-2xl text-slate-400 mb-8">
+              VAPT Analyst • Red Team Operator
+            </h2>
 
-      <div
-        style={{
-          marginTop: "50px",
-          display: "flex",
-          gap: "15px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <span
-          style={{
-            border: "1px solid #30363d",
-            padding: "10px 15px",
-            borderRadius: "20px",
-          }}
-        >
-          VAPT
-        </span>
+            <p className="text-slate-300 leading-8 max-w-3xl text-lg">
+              M.Tech Cyber Security student with practical experience in
+              Vulnerability Assessment & Penetration Testing, Red Team
+              Operations, SOC Monitoring, Cloud Security, and ICS/SCADA
+              Security. Experienced in offensive security exercises, threat
+              detection, cybersecurity research, and security assessments
+              through internships, cyber exercises, and published research.
+            </p>
 
-        <span
-          style={{
-            border: "1px solid #30363d",
-            padding: "10px 15px",
-            borderRadius: "20px",
-          }}
-        >
-          Red Teaming
-        </span>
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 mt-10">
 
-        <span
-          style={{
-            border: "1px solid #30363d",
-            padding: "10px 15px",
-            borderRadius: "20px",
-          }}
-        >
-          SOC Operations
-        </span>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
+              >
+                Download Resume
+              </a>
 
-        <span
-          style={{
-            border: "1px solid #30363d",
-            padding: "10px 15px",
-            borderRadius: "20px",
-          }}
-        >
-          Cloud Security
-        </span>
+              <a
+                href="#contact"
+                className="border border-emerald-400 text-emerald-400 px-6 py-3 rounded-lg hover:bg-emerald-400 hover:text-black transition"
+              >
+                Contact Me
+              </a>
 
-        <span
-          style={{
-            border: "1px solid #30363d",
-            padding: "10px 15px",
-            borderRadius: "20px",
-          }}
-        >
-          ICS Security
-        </span>
-      </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-6 mt-8 text-3xl">
+
+              <a
+                href="https://github.com/shahrachit0202"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-emerald-400 transition"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/rachit-shah-8ab8b220b/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500 transition"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                href="https://tryhackme.com/p/R2Shah"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-400 transition"
+              >
+                <SiTryhackme />
+              </a>
+
+            </div>
+
+            {/* Skills */}
+            <div className="flex flex-wrap gap-3 mt-10">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="border border-slate-700 text-slate-300 px-4 py-2 rounded-full hover:border-emerald-400 hover:text-emerald-400 transition"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+          </div>
+
+          {/* Right Side */}
+          <div className="flex justify-center">
+
+            <div className="relative">
+
+              <img
+                src={profile}
+                alt="Rachit Shah"
+                className="
+                  w-72
+                  h-72
+                  lg:w-96
+                  lg:h-96
+                  rounded-full
+                  object-cover
+                  border-4
+                  border-emerald-400
+                  shadow-[0_0_40px_rgba(16,185,129,0.35)]
+                "
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+      </Container>
     </section>
   );
 }

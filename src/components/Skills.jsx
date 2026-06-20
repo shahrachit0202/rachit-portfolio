@@ -1,41 +1,93 @@
+import Container from "./Container";
+import SectionTitle from "./SectionTitle";
+
 export default function Skills() {
-  const skills = [
-    "Burp Suite",
-    "Nmap",
-    "Metasploit",
-    "Nessus",
-    "Wireshark",
-    "Splunk",
-    "Snort",
-    "AWS",
-    "Azure",
-    "Python",
+  const skillGroups = [
+    {
+      title: "Offensive Security",
+      skills: [
+        "Burp Suite",
+        "Metasploit",
+        "Nmap",
+        "SQLMap",
+        "Nessus",
+        "OpenVAS",
+      ],
+    },
+    {
+      title: "Defensive Security",
+      skills: [
+        "Snort",
+        "Splunk",
+        "Wireshark",
+        "SOC Monitoring",
+      ],
+    },
+    {
+      title: "Cloud Security",
+      skills: [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+      ],
+    },
+    {
+      title: "Programming",
+      skills: [
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Bash",
+      ],
+    },
   ];
 
   return (
-    <section
-      id="skills"
-      style={{
-        padding: "100px 20px",
-        maxWidth: "900px",
-        margin: "auto",
-      }}
-    >
-      <h2>Skills</h2>
+    <section id="skills" className="py-24">
+      <Container>
 
-      <div>
-        {skills.map((skill) => (
-          <button
-            key={skill}
-            style={{
-              margin: "10px",
-              padding: "10px",
-            }}
-          >
-            {skill}
-          </button>
-        ))}
-      </div>
+        <SectionTitle title="Core Expertise" />
+
+        <div className="grid md:grid-cols-2 gap-6">
+
+          {skillGroups.map((group) => (
+            <div
+              key={group.title}
+              className="
+                bg-[#161b22]
+                border
+                border-slate-800
+                rounded-xl
+                p-6
+              "
+            >
+              <h3 className="text-xl font-semibold text-emerald-400 mb-4">
+                {group.title}
+              </h3>
+
+              <div className="flex flex-wrap gap-3">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      border
+                      border-slate-700
+                      rounded-full
+                      px-3
+                      py-2
+                      text-slate-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </Container>
     </section>
   );
 }

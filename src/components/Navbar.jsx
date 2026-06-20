@@ -1,27 +1,80 @@
 export default function Navbar() {
   return (
     <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        background: "#161b22",
-        padding: "20px",
-        display: "flex",
-        justifyContent: "space-between",
-        zIndex: 1000,
-      }}
+      className="
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        bg-[#0d1117]/90
+        backdrop-blur-md
+        border-b
+        border-slate-800
+      "
     >
-      <h3 style={{ color: "#00ff88" }}>
-        Rachit Shah
-      </h3>
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          px-6
+          py-4
+          flex
+          justify-between
+          items-center
+        "
+      >
+        <h2
+          className="
+            text-xl
+            font-bold
+            text-emerald-400
+          "
+        >
+          Rachit Shah
+        </h2>
 
-      <div>
-        <a href="#about" style={{ margin: "10px", color: "white" }}>About</a>
-        <a href="#skills" style={{ margin: "10px", color: "white" }}>Skills</a>
-        <a href="#experience" style={{ margin: "10px", color: "white" }}>Experience</a>
-        <a href="#projects" style={{ margin: "10px", color: "white" }}>Projects</a>
-        <a href="#contact" style={{ margin: "10px", color: "white" }}>Contact</a>
+        <div
+          className="
+            hidden
+            md:flex
+            gap-6
+            text-sm
+            text-slate-300
+          "
+        >
+          <a href="#about" className="hover:text-emerald-400">
+            About
+          </a>
+
+          <a href="#skills" className="hover:text-emerald-400">
+            Skills
+          </a>
+
+          <a href="#experience" className="hover:text-emerald-400">
+            Experience
+          </a>
+
+          <a href="#redteam" className="hover:text-emerald-400">
+            Red Team
+          </a>
+
+          <a href="#projects" className="hover:text-emerald-400">
+            Projects
+          </a>
+
+          <a href="#publications" className="hover:text-emerald-400">
+            Publications
+          </a>
+
+          <a href="#certifications" className="hover:text-emerald-400">
+            Certifications
+          </a>
+
+          <a href="#contact" className="hover:text-emerald-400">
+            Contact
+          </a>
+        </div>
       </div>
     </nav>
   );
