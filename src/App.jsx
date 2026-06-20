@@ -10,6 +10,7 @@ import Publications from "./components/Publications";
 import Certifications from "./components/Certifications";
 import Footer from "./components/Footer";
 import Stats from "./components/Stats";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Hero />
       <Stats />
+      <Achievements />
       <About />
       <Skills />
       <Experience />
