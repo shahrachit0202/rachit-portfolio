@@ -7,6 +7,14 @@ export default function Experience() {
       company: "WESEE (Indian Navy)",
       role: "VAPT Intern",
       duration: "Oct 2025 - Mar 2026",
+
+      achievements: [
+        "Conducted web application vulnerability assessments and security testing.",
+        "Performed vulnerability identification and validation using industry-standard tools.",
+        "Documented security findings and remediation recommendations.",
+        "Supported security evaluation activities within defense-oriented environments.",
+      ],
+
       skills: [
         "VAPT",
         "Burp Suite",
@@ -16,10 +24,19 @@ export default function Experience() {
         "Reporting",
       ],
     },
+
     {
       company: "CiberTroops Security Solutions",
       role: "VAPT Intern",
       duration: "Nov 2024 - Mar 2025",
+
+      achievements: [
+        "Performed web application security assessments and vulnerability testing.",
+        "Identified SQL Injection, XSS, and authentication weaknesses.",
+        "Conducted security validation and remediation verification.",
+        "Prepared technical vulnerability assessment reports.",
+      ],
+
       skills: [
         "Web Pentesting",
         "Network Security",
@@ -28,10 +45,19 @@ export default function Experience() {
         "Nessus",
       ],
     },
+
     {
       company: "Elastic Run",
       role: "SOC Analyst Intern",
       duration: "Sep 2022 - Jan 2023",
+
+      achievements: [
+        "Monitored security alerts and investigated suspicious activities.",
+        "Supported incident response and threat analysis activities.",
+        "Worked with endpoint and cloud security monitoring solutions.",
+        "Assisted in identifying and escalating security incidents.",
+      ],
+
       skills: [
         "SOC Monitoring",
         "Incident Response",
@@ -48,7 +74,7 @@ export default function Experience() {
 
         <div className="relative border-l-2 border-emerald-400 ml-4">
 
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <div
               key={exp.company}
               className="relative ml-10 mb-12"
@@ -97,7 +123,20 @@ export default function Experience() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-3 mt-6">
+                {/* Achievement Bullets */}
+                <div className="mt-6 space-y-3">
+                  {exp.achievements.map((item) => (
+                    <p
+                      key={item}
+                      className="text-slate-300 leading-7"
+                    >
+                      • {item}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Skills */}
+                <div className="flex flex-wrap gap-3 mt-8">
                   {exp.skills.map((skill) => (
                     <span
                       key={skill}
@@ -115,6 +154,7 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+
               </div>
             </div>
           ))}
