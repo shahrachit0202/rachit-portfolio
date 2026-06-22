@@ -6,7 +6,8 @@ export default function Projects() {
     {
       title: "DeepVerify",
       description:
-        "AI-powered deepfake detection and liveness analysis system designed to identify manipulated media and improve digital identity verification.",
+        "AI-powered deepfake detection and liveness verification solution developed to identify manipulated media and strengthen digital identity verification. The project leverages deep learning techniques for authenticity analysis in security-sensitive environments.",
+
       technologies: [
         "Python",
         "TensorFlow",
@@ -14,24 +15,20 @@ export default function Projects() {
         "CNN",
         "Deep Learning",
       ],
+
       github: "#",
+
+      publication:
+        "https://link.springer.com/chapter/10.1007/978-981-97-8605-3_18",
     },
+
     {
-      title: "CcureGen",
+      title:
+        "Enhancing Security in a University Network Using Snort & Wireshark",
+
       description:
-        "Android security application featuring phishing detection, security awareness, and SMS threat analysis to help users identify malicious communications.",
-      technologies: [
-        "Android",
-        "Java",
-        "Cyber Security",
-        "SMS Security",
-      ],
-      github: "https://github.com/shailshah2757/PhishSMS",
-    },
-    {
-      title: "Enhancing Security in a University Network Using Snort & Wireshark",
-      description:
-        "Network security project focused on intrusion detection, packet analysis, threat monitoring, and custom Snort rule development for university environments.",
+        "Designed and implemented a university network security monitoring solution using Snort IDS and Wireshark. Developed custom intrusion detection rules, analyzed network traffic, and identified potential threats through packet inspection and security monitoring.",
+
       technologies: [
         "Snort",
         "Wireshark",
@@ -39,7 +36,29 @@ export default function Projects() {
         "Network Security",
         "Threat Detection",
       ],
-      github: "https://github.com/shahrachit0202/snort_rules",
+
+      github:
+        "https://github.com/shahrachit0202/snort_rules",
+
+      publication:
+        "https://link.springer.com/chapter/10.1007/978-981-97-6675-8_11",
+    },
+
+    {
+      title: "CcureGen",
+
+      description:
+        "Android-based security application focused on phishing awareness and SMS threat detection. The application assists users in identifying potentially malicious communications and improving mobile security awareness.",
+
+      technologies: [
+        "Android",
+        "Java",
+        "Cyber Security",
+        "SMS Security",
+      ],
+
+      github:
+        "https://github.com/shailshah2757/PhishSMS",
     },
   ];
 
@@ -77,7 +96,7 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
@@ -97,24 +116,51 @@ export default function Projects() {
                 </div>
               </div>
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  inline-block
-                  text-center
-                  bg-emerald-500
-                  text-black
-                  font-semibold
-                  py-3
-                  rounded-lg
-                  hover:bg-emerald-400
-                  transition
-                "
-              >
-                View Project →
-              </a>
+              <div className="flex flex-col gap-3">
+
+                {project.github !== "#" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      text-center
+                      bg-emerald-500
+                      text-black
+                      font-semibold
+                      py-3
+                      rounded-lg
+                      hover:bg-emerald-400
+                      transition
+                    "
+                  >
+                    View Project →
+                  </a>
+                )}
+
+                {project.publication && (
+                  <a
+                    href={project.publication}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      text-center
+                      border
+                      border-emerald-500
+                      text-emerald-400
+                      font-semibold
+                      py-3
+                      rounded-lg
+                      hover:bg-emerald-500
+                      hover:text-black
+                      transition
+                    "
+                  >
+                    View Publication →
+                  </a>
+                )}
+
+              </div>
             </div>
           ))}
 
