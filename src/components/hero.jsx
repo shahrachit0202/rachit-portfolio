@@ -28,6 +28,25 @@ export default function Hero() {
           {/* Left Side */}
           <div className="flex-1">
 
+            {/* Open to Opportunities Badge */}
+            <div
+              className="
+                inline-block
+                mb-5
+                px-4
+                py-2
+                rounded-full
+                border
+                border-emerald-500
+                bg-emerald-500/10
+                text-emerald-400
+                text-sm
+                font-medium
+              "
+            >
+              Open to Cyber Security Opportunities
+            </div>
+
             <p className="text-emerald-400 font-semibold tracking-widest mb-3">
               OFFENSIVE SECURITY • RED TEAMING • VAPT
             </p>
@@ -41,53 +60,70 @@ export default function Hero() {
             </h2>
 
             <p className="text-slate-300 leading-8 max-w-3xl text-lg">
-              M.Tech Cyber Security student with practical experience in
-              Vulnerability Assessment & Penetration Testing, Red Team
-              Operations, SOC Monitoring, Cloud Security, and ICS/SCADA
-              Security. Experienced in offensive security exercises, threat
-              detection, cybersecurity research, and security assessments
-              through internships, cyber exercises, and published research.
+              M.Tech Cyber Security student specializing in Vulnerability
+              Assessment & Penetration Testing (VAPT), Red Team Operations,
+              Web Application Security, Cloud Security, and ICS/SCADA Security.
+              Experienced in offensive security assessments, cyber exercises,
+              security research, and threat analysis through internships,
+              national cyber exercises, and Springer publications.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mt-10">
+<div className="flex flex-wrap gap-4 mt-10">
 
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  bg-emerald-400
-                  text-black
-                  px-6
-                  py-3
-                  rounded-lg
-                  font-semibold
-                  hover:scale-105
-                  transition
-                "
-              >
-                Download Resume
-              </a>
+  <a
+    href={`${import.meta.env.BASE_URL}resume.pdf`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      bg-emerald-400
+      text-black
+      px-6
+      py-3
+      rounded-lg
+      font-semibold
+      hover:scale-105
+      transition
+    "
+  >
+    Resume
+  </a>
 
-              <a
-                href="#projects"
-                className="
-                  border
-                  border-emerald-400
-                  text-emerald-400
-                  px-6
-                  py-3
-                  rounded-lg
-                  hover:bg-emerald-400
-                  hover:text-black
-                  transition
-                "
-              >
-                View Projects
-              </a>
+  <a
+    href="#projects"
+    className="
+      border
+      border-emerald-400
+      text-emerald-400
+      px-6
+      py-3
+      rounded-lg
+      hover:bg-emerald-400
+      hover:text-black
+      transition
+    "
+  >
+    View Projects
+  </a>
 
-            </div>
+  <a
+    href="#contact"
+    className="
+      border
+      border-slate-700
+      text-slate-300
+      px-6
+      py-3
+      rounded-lg
+      hover:border-emerald-400
+      hover:text-emerald-400
+      transition
+    "
+  >
+    Contact
+  </a>
+
+</div>
 
             {/* Social Links */}
             <div className="flex gap-6 mt-8 text-3xl">
