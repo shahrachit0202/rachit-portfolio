@@ -68,7 +68,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-16">
       <Container>
         <SectionTitle title="Professional Experience" />
 

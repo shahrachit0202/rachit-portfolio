@@ -68,73 +68,18 @@ export default function Hero() {
               national cyber exercises, and Springer publications.
             </p>
 
-            {/* Buttons */}
-<div className="flex flex-wrap gap-4 mt-10">
-
-  <a
-    href={`${import.meta.env.BASE_URL}resume.pdf`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      bg-emerald-400
-      text-black
-      px-6
-      py-3
-      rounded-lg
-      font-semibold
-      hover:scale-105
-      transition
-    "
-  >
-    Resume
-  </a>
-
-  <a
-    href="#projects"
-    className="
-      border
-      border-emerald-400
-      text-emerald-400
-      px-6
-      py-3
-      rounded-lg
-      hover:bg-emerald-400
-      hover:text-black
-      transition
-    "
-  >
-    View Projects
-  </a>
-
-  <a
-    href="#contact"
-    className="
-      border
-      border-slate-700
-      text-slate-300
-      px-6
-      py-3
-      rounded-lg
-      hover:border-emerald-400
-      hover:text-emerald-400
-      transition
-    "
-  >
-    Contact
-  </a>
-
-</div>
+            
 
             {/* Social Links */}
             <div className="flex gap-6 mt-8 text-3xl">
 
               <a
-                href="https://github.com/shahrachit0202"
+                href="https://tryhackme.com/p/R2Shah"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white hover:text-emerald-400 transition"
+                className="text-white hover:text-red-400 transition"
               >
-                <FaGithub />
+                <SiTryhackme />
               </a>
 
               <a
@@ -147,13 +92,14 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://tryhackme.com/p/R2Shah"
+                href="https://github.com/shahrachit0202"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white hover:text-red-400 transition"
+                className="text-white hover:text-emerald-400 transition"
               >
-                <SiTryhackme />
+                <FaGithub />
               </a>
+              
 
               <a
                 href="mailto:shahrachit0202@gmail.com"

@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function About() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-16">
       <Container>
 
         <SectionTitle title="About Me" />

@@ -4,17 +4,20 @@ export default function Footer() {
       className="
         border-t
         border-slate-800
-        py-8
+        py-10
         text-center
-        text-slate-500
       "
     >
-      <p>
+      <p className="text-slate-400 font-medium">
         © 2026 Rachit Shah
       </p>
 
-      <p className="mt-2">
-        Offensive Security Engineer • Red Team Operator • VAPT Analyst
+      <p className="mt-3 text-slate-500">
+        Offensive Security Engineer • VAPT • Red Teaming
+      </p>
+
+      <p className="mt-2 text-slate-600 text-sm">
+        Ahmedabad, Gujarat, India
       </p>
     </footer>
   );

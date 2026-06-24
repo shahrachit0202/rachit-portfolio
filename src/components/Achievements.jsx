@@ -30,7 +30,7 @@ export default function Achievements() {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-16">
       <Container>
         <SectionTitle title="Featured Achievements" />
 

@@ -63,7 +63,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16">
       <Container>
         <SectionTitle title="Featured Projects" />
 

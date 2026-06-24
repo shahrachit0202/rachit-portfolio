@@ -40,7 +40,7 @@ export default function RedTeam() {
   ];
 
   return (
-    <section id="redteam" className="py-24">
+    <section id="redteam" className="py-16">
       <Container>
 
         <SectionTitle title="Red Team Operations" />

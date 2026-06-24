@@ -57,6 +57,7 @@ export default function Navbar() {
           className="
             hidden
             md:flex
+            items-center
             gap-6
             text-sm
             text-slate-300

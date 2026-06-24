@@ -11,12 +11,12 @@ export default function Stats() {
       label: "Security Internships",
     },
     {
-      value: "3",
-      label: "Cyber Exercises",
+      value: "50+",
+      label: "TryHackMe Labs",
     },
     {
-      value: "5+",
-      label: "Security Domains",
+      value: "3",
+      label: "Cyber Exercises",
     },
   ];
 

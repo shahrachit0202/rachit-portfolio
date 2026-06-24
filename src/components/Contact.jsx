@@ -43,7 +43,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-16">
       <Container>
         <SectionTitle title="Let's Connect" />
 

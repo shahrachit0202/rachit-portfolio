@@ -14,7 +14,7 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="certifications" className="py-24">
+    <section id="certifications" className="py-16">
       <Container>
 
         <SectionTitle title="Certifications" />
